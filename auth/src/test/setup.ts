@@ -10,16 +10,16 @@ beforeAll(async () => {
   const mongoUri = await mongo.getUri();
 
   await mongoose.connect(mongoUri);
-});
+}, 9999);
 
 beforeEach(async () => {
   const collections = await mongoose.connection.db.collections();
   for (let collection of collections) {
     await collection.deleteMany({});
   }
-});
+}, 9999);
 
 afterAll(async () => {
   await mongo.stop();
   await mongoose.connection.close();
-});
+}, 9999);
