@@ -1,3 +1,5 @@
+import axios from 'axios';
+
 const Landing = ({ currentUser }) => {
   console.log(currentUser);
   axios.get('/api/users/currentuser').catch((err) => {
