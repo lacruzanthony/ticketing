@@ -1,13 +1,14 @@
 import axios from 'axios';
 import { useState } from 'react';
 
-const useRequest = async ({ url, method, body }) => {
+const useRequest = ({ url, method, body }) => {
   const [errors, setErrors] = useState(null);
 
-  const doRequest = () => {
+  const doRequest = async () => {
     try {
+      setErrors(null);
       const response = await axios[method](url, body);
-      return response.data
+      return response.data;
     } catch (err) {
       setErrors(
         <div className="alert alert-danger">
@@ -18,8 +19,10 @@ const useRequest = async ({ url, method, body }) => {
             ))}
           </ul>
         </div>
-      )
+      );
     }
   };
   return { doRequest, errors };
 };
+
+export default useRequest;
