@@ -1,6 +1,7 @@
 import Link from 'next/link';
 
 const Header = ({ currentUser }) => {
+  // rendering the links based on a condition.
   const links = [
     !currentUser && { label: 'Sign up', href: '/auth/signup' },
     !currentUser && { label: 'Sign in', href: '/auth/signin' },
