@@ -1,6 +1,5 @@
 import request from 'supertest';
 import { app } from '../../app';
-import { Ticket } from '../../models/ticket';
 
 const title = 'concert';
 const price = '20';
