@@ -20,6 +20,7 @@ it('returns a status other than 401 if the user is signed in', async () => {
 });
 
 it('returns an error if an invalid title is provided', async () => {
+  console.log(global.signin());
   await request(app).post('/api/tickets').set('Cookie', global.signin()).send({ title: '', price: 20 }).expect(400);
   await request(app).post('/api/tickets').set('Cookie', global.signin()).send({ price: 20 }).expect(400);
 });
