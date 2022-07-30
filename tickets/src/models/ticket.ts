@@ -22,7 +22,7 @@ const ticketSchema = new mongoose.Schema(
   {
     title: {
       type: String,
-      require: true
+      required: true
     },
     price: {
       type: Number,
@@ -30,7 +30,7 @@ const ticketSchema = new mongoose.Schema(
     },
     userId: {
       type: String,
-      require: true
+      required: true
     }
   },
   {
@@ -42,12 +42,11 @@ const ticketSchema = new mongoose.Schema(
     }
   }
 );
-
 ticketSchema.set('versionKey', 'version');
 ticketSchema.plugin(updateIfCurrentPlugin);
 
-ticketSchema.statics.build = (attr: TicketAttrs) => {
-  return new Ticket(attr);
+ticketSchema.statics.build = (attrs: TicketAttrs) => {
+  return new Ticket(attrs);
 };
 
 const Ticket = mongoose.model<TicketDoc, TicketModel>('Ticket', ticketSchema);
