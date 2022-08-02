@@ -21,7 +21,6 @@ const setup = async () => {
       price: 10
     }
   };
-
   // @ts-ignore
   const msg: Message = {
     ack: jest.fn()
