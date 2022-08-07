@@ -53,5 +53,6 @@ it('acks the message', async () => {
 
   await listener.onMessage(data, msg);
 
+  // ack() should be called once.
   expect(msg.ack).toHaveBeenCalled();
 });
