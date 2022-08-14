@@ -2,6 +2,7 @@ import express from 'express';
 import 'express-async-errors';
 import { json } from 'body-parser';
 import cookieSession from 'cookie-session';
+import { createChargeRouter } from './routes/new';
 
 import { NotFoundError, errorHandler, currentUser } from '@ticketsla/common';
 
@@ -16,6 +17,7 @@ app.use(
   })
 );
 app.use(currentUser);
+app.use(createChargeRouter);
 
 app.all('*', async (req, res, next) => {
   throw new NotFoundError();
