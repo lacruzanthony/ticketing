@@ -33,6 +33,7 @@ router.post(
     if (order.status === OrderStatus.Cancelled) {
       throw new BadRequestError('Cannot pay for a cancelled order');
     }
+
     res.send({ success: true });
   }
 );
