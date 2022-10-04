@@ -4,7 +4,7 @@ const ExportClient = ({ req }) => {
   if (typeof window === 'undefined') {
     // server.
     return axios.create({
-      baseURL: 'http://ingress-nginx-controller.ingress-nginx.svc.cluster.local',
+      baseURL: 'http://anthonyla.dev',
       headers: req.headers
     });
   } else {
