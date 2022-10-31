@@ -39,4 +39,4 @@ This will load and launch the `infra/k8s/ingress-serv.yaml` configuration.
 Now you can go to your browser and type in the URL: `localhost`
 
 You should see the main page:
-![main page](./assets/main-page.png.png 'a title')
+![main page](./assets/main-page.png 'a title')
