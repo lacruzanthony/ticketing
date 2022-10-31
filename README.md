@@ -1,6 +1,7 @@
-# Before start 
+# Before start
 
 This project is made by seven services: auth, client, common, expiration, orders, payments & tickets. Using NATS as a message broker. To start the proyect we will need:
+
 - Docker, install windows version [here](https://docs.docker.com/desktop/install/windows-install/)
 - Skaffold, install windows version [here](https://skaffold.dev/docs/install/#). You will to update your env variables after download the `.exe`
 - Node.js. [Install](https://nodejs.org/en/download/)
@@ -36,3 +37,6 @@ Once you have ran for each service the steps above, we can execute the skaffold 
 This will load and launch the `infra/k8s/ingress-serv.yaml` configuration.
 
 Now you can go to your browser and type in the URL: `localhost`
+
+You should see the main page:
+![main page](./assets/main-page.png.png 'a title')
