@@ -39,4 +39,16 @@ This will load and launch the `infra/k8s/ingress-serv.yaml` configuration.
 Now you can go to your browser and type in the URL: `localhost`
 
 You should see the main page:
+
 ![main page](./assets/main-page.png 'a title')
+
+# The application
+### Not logged in
+Main page: list of tickets created.
+Sign up: create a user.
+Sign in: uses a existing user.
+
+### Logged in
+Sell tickets: create a new ticket for the current user
+My orders: tickets already purchased
+Sign out: close current session
