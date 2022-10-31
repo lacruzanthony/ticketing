@@ -1,21 +1,21 @@
 # Before start
 
-This project is made by seven services: auth, client, common, expiration, orders, payments & tickets. Using NATS as a message broker. To start the proyect we will need:
+Seven services make this project: auth, client, common, expiration, orders, payments & tickets. Using NATS as a message broker. To start the project, we will need the following:
 
 - Docker, install windows version [here](https://docs.docker.com/desktop/install/windows-install/)
-- Skaffold, install windows version [here](https://skaffold.dev/docs/install/#). You will to update your env variables after download the `.exe`
+- Skaffold, install windows version [here](https://skaffold.dev/docs/install/#). You will update your env variables after downloading the `.exe`
 - Node.js. [Install](https://nodejs.org/en/download/)
-- npm. It will be installed with Node.js
-- Make sure you are using you local Docker context.
+- npm. who comes with Node.js
+- Make sure you are using your local Docker context.
 
 ## Getting started
 
-Once we have all our dependencies installed, we need to create our Docker images, to do so, we have to go to each service
+Once we have all our dependencies installed, we must create our Docker images. To do so, we have to go to each service
 folder and run the following command:
 
 ### Auth service:
 
-Once in `ticketing` folder:
+Once in the `ticketing` folder:
 
 `cd auth`
 
@@ -27,11 +27,11 @@ The repository name could be your Docker user, and the image name is a random na
 
 `Docker build -t anthonyla/auth`
 
-Once the image is build we can push it to our local Docker context:
+Once the image is built, we can push it to our local Docker context:
 
 `Docker push anthonyla/auth`
 
-Once you have ran for each service the steps above, we can execute the skaffold command. It's important to be placed in `ticketing` folder:
+Once you run the steps above for each service, we can execute the skaffold command. It's essential to be placed in the `ticketing` folder:
 
 `skaffold dev`
 
@@ -47,12 +47,12 @@ You should see the main page:
 ### Not logged in
 - Main page: list of tickets created.
 - Sign up: create a user.
-- Sign in: uses a existing user.
+- Sign-in: uses an existing user.
 
 ### Logged in
 - Sell tickets: create a new ticket for the current user
 - My orders: tickets already purchased
-- Sign out: close current session
+- Sign out: close the current session
 
 ## Using the application
-If you want to create a ticket you will to create a user first, using the `Sign up` option. Then you will see the `Sell tickets` in the header bar.You will type a random name and price, and then you should see the ticket in the main page.
+To create a ticket, you must create a user using the `Sign up` option. Then you will see the `Sell tickets` in the header bar. Next, you will type a random name and price, and then you should see the ticket on the main page.
