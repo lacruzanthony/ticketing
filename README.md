@@ -6,6 +6,7 @@ This project is made by seven services: auth, client, common, expiration, orders
 - Skaffold, install windows version [here](https://skaffold.dev/docs/install/#). You will to update your env variables after download the `.exe`
 - Node.js. [Install](https://nodejs.org/en/download/)
 - npm. It will be installed with Node.js
+- Make sure you are using you local Docker context.
 
 ## Getting started
 
