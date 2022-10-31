@@ -44,11 +44,14 @@ You should see the main page:
 
 # The application
 ### Not logged in
-Main page: list of tickets created.
-Sign up: create a user.
-Sign in: uses a existing user.
+- Main page: list of tickets created.
+- Sign up: create a user.
+- Sign in: uses a existing user.
 
 ### Logged in
-Sell tickets: create a new ticket for the current user
-My orders: tickets already purchased
-Sign out: close current session
+- Sell tickets: create a new ticket for the current user
+- My orders: tickets already purchased
+- Sign out: close current session
+
+## Using the application
+If you want to create a ticket you will to create a user first, using the `Sign up` option. Then you will see the `Sell tickets` in the header bar.You will type a random name and price, and then you should see the ticket in the main page.
