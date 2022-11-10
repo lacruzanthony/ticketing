@@ -1,4 +1,4 @@
-# Before start
+# Before to start
 
 Seven services make this project: auth, client, common, expiration, orders, payments & tickets. Using NATS as a message broker. To start the project, we will need the following:
 
